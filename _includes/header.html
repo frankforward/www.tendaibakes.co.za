@@ -1,0 +1,44 @@
+<header class="section page-header">
+  <!-- RD Navbar-->
+  <div class="rd-navbar-wrap">
+    <nav class="rd-navbar rd-navbar-modern" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="100px" data-xl-stick-up-offset="120px" data-xxl-stick-up-offset="140px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+      <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+      <div class="rd-navbar-aside-outer">
+        <div class="rd-navbar-aside">
+          <div class="rd-navbar-collapse">
+            <div class="contacts-ruth">
+              <div class="unit unit-spacing-xs-2 align-items-center">
+                <div class="unit-left"><span class="icon linearicons-map-marker"></span></div>
+                <div class="unit-body"><a href="#">1112 Minitum Street<br/>Wilgeheuwel, GP 1724 Roodepoort</a></div>
+              </div>
+            </div><a class="button button-sm button-icon button-icon-left button-default-outline-3 button-zakaria" href="{{ '/contact-us' | relative_url }}"><span class="icon mdi mdi-email-outline"></span>Get in touch</a>
+          </div>
+          <!-- RD Navbar Panel-->
+          <div class="rd-navbar-panel">
+            <!-- RD Navbar Toggle-->
+            <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+            <!-- RD Navbar Brand-->
+            <div class="rd-navbar-brand">
+              <a class="brand" href="index.html">
+                <img class="brand-logo-dark" alt="" width="231" height="49" src="{{ "/assets/images/tendai-bakes-logo.jpg" | relative_url }}" srcset="{{ "/assets/images/tendai-bakes-logo.jpg" | relative_url }}" 2x />
+                <img class="brand-logo-light" alt="" width="231" height="49"  src="{{ "/assets/images/tendai-bakes-logo.jpg" | relative_url }}" srcset="{{ "/assets/images/logo-inverse-231x49.png" | relative_url }} 2x" />
+              </a>
+            </div>
+          </div>
+          <div class="rd-navbar-button"><a class="button button-sm button-icon button-icon-left button-default-outline-3 button-zakaria" href="{{ '/contact-us' | relative_url }}"><span class="icon mdi mdi-email-outline"></span>Get in touch</a></div>
+        </div>
+      </div>
+      <div class="rd-navbar-main-outer">
+        <div class="rd-navbar-main">
+          <div class="rd-navbar-nav-wrap">
+            {%- include top-nav.html -%}
+          </div>
+          <div class="rd-navbar-main-element">
+            {%- include navbar-search.html -%}
+            {%- include navbar-basket.html -%}
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

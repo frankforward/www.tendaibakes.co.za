@@ -1,0 +1,25 @@
+{% assign all_pages = site.pages | where_exp: "item", "item.title" %}
+{% assign top_level_pages = all_pages | where: "category", nil %}
+{% assign top_level_pages = top_level_pages | where_exp: "item", "item.order" %}
+{% assign sorted_top_level_pages = top_level_pages | sort: "order" %}
+
+<!-- RD Navbar Nav-->
+<ul class="rd-navbar-nav">
+    <li class="rd-nav-item active"><a class="rd-nav-link" href="/">Home</a></li>
+    {% for page in sorted_top_level_pages %}
+    <li class="rd-nav-item">
+        <a class="rd-nav-link" href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+        {% assign category_name = page.url | remove:  "/" %}
+        {% assign category_pages = all_pages | where: "category", category_name %}
+        {% if category_pages.size > 0 %}
+            {% assign sorted_category_pages = category_pages | sort: "order" %}
+            <!-- RD Navbar Dropdown-->
+            <ul class="rd-menu rd-navbar-dropdown">
+                {% for category_page in sorted_category_pages %}
+                <li class="rd-dropdown-item"><a class="rd-dropdown-link" href="{{ category_page.url }}">{{ category_page.title }}</a></li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" class="wide wow-animation">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include preloader.html -%}
+    <div class="page">
+      {%- include header.html -%}
+      {{ content }}
+      {%- include footer.html -%}
+    </div>
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="{{ "/assets/js/core.min.js" | relative_url }}"></script>
+    <script src="{{ "/assets/js/script.js" | relative_url }}"></script>
+  </body>
+
+</html>
